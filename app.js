@@ -162,6 +162,57 @@ const products = [
     "new": true
   }
 ];
+const pieceConcepts={
+  "16": [
+    "Presença de equipe, no volume certo",
+    "Uma básica para atravessar a diária de gravação. A assinatura pequena no peito identifica a crew e a frase na nuca cria um detalhe para quem chega perto. O preto e a aplicação discreta deixam a peça fácil de repetir e combinar, com o pertencimento expresso em poucos elementos."
+  ],
+  "14": [
+    "O audiovisual como jogo coletivo",
+    "A referência ao futebol vintage aparece na gola polo, no jacquard tonal e nos acabamentos contrastantes. O número 24 aproxima a linguagem de uniforme dos quadros por segundo do cinema, enquanto a frase nas costas coloca a equipe no centro. Azul ROTA e preto trazem esse repertório esportivo para a identidade da marca."
+  ],
+  "15": [
+    "Continuar em movimento",
+    "A frase Keep Rolling vale para a câmera e para o corpo. O azul ROTA ocupa a peça, combinado ao grafite e a linhas de percurso que sugerem deslocamento. Os pontos de cor nos puxadores dão ritmo ao conjunto e conectam o equipamento de trabalho à roupa de sair para explorar."
+  ],
+  "09": [
+    "Vestir o ofício",
+    "A tipografia assume o papel principal. FILMMAKER em uma linha e ON SET em outra criam uma leitura direta da profissão, com contraste entre letras e o prisma como ponto de ligação. A base escura deixa a mensagem nas costas funcionar como assinatura de quem vive a produção."
+  ],
+  "01": [
+    "Olhar antes de enquadrar",
+    "A câmera e o fotógrafo traduzem a curiosidade que vem antes de qualquer imagem. Azul sobre branco-osso mantém a ilustração legível e a peça leve visualmente. A modelagem ampla reforça a proposta de circular com liberdade, do trabalho aos encontros que alimentam o repertório."
+  ],
+  "02": [
+    "O que acontece fora do quadro",
+    "A câmera no tripé é um símbolo do set, mas a frase convida a perceber o que existe ao redor dele. O preto lavado dá um aspecto vivido, enquanto a arte clara e azul concentra a narrativa nas costas. A frente pequena permite usar a camiseta no dia a dia sem perder esse vínculo com o ofício."
+  ],
+  "03": [
+    "A rua como repertório",
+    "Skate e audiovisual se encontram pela observação e pelo movimento. A gola e os punhos azuis retomam a camiseta ringer, com um caráter esportivo e casual. A ilustração transforma a rua em assunto da peça, lembrando que ideias também surgem longe da mesa de trabalho."
+  ],
+  "04": [
+    "Criar começa no encontro",
+    "A mesa e os amigos representam a troca que faz uma ideia avançar. A frase ocupa as costas como um convite, e o azul faz da própria camiseta um campo de identidade ROTA. É uma peça de pertencimento para momentos compartilhados dentro e fora do trabalho."
+  ],
+  "05": [
+    "Uma outra postura no set",
+    "A gola polo propõe uma presença mais arrumada, combinada ao conforto visual do moletom. Preto, grafite e uma faixa azul organizam a peça com poucos elementos. O bordado pequeno mantém a identificação discreta, para circular entre preparação, reunião e gravação."
+  ],
+  "06": [
+    "A mesma equipe em outros cenários",
+    "A sequência de set, skate e litoral conta uma rotina que não termina quando a câmera desliga. Ilustrações azuis sobre a base clara costuram esses momentos como pequenas cenas. O moletom vira uma camada comum para pessoas que compartilham trabalho e repertório."
+  ],
+  "07": [
+    "Direção em cada linha",
+    "As faixas azuis nas mangas desenham trajetórias e dão ritmo à silhueta. Preto, azul e branco-osso fazem a ponte entre roupa esportiva e identidade de equipe. O zíper integral e a construção sem capuz propõem uma camada simples para acompanhar deslocamentos."
+  ],
+  "08": [
+    "Levar o olhar para fora",
+    "O olho combinado ao diafragma da câmera transforma a observação em símbolo. A construção de anoraque, com capuz e bolso frontal, aproxima a peça do universo de explorar locações. Azul, preto e grafite distribuem a identidade pelos recortes e deixam a ilustração clara se destacar nas costas."
+  ]
+};
+function conceptMarkup(id, collection=pieceConcepts){const [title,copy]=collection[id];return `<section class="piece-concept"><p class="eyebrow">POR TRÁS DA PEÇA</p><h3>${title}</h3><p>${copy}</p></section>`;}
 const trailViews = {"15": "15-em-movimento-doug-trilha-frente-verso", "08": "08-location-doug-trilha-frente-verso", "07": "07-motion-doug-trilha-frente-verso", "06": "06-same-crew-doug-trilha-frente-verso"};
 const lifestyle = p => `assets/${p.file}${p.id==='09'?'-life':'-lifestyle'}.webp`;
 const locationName = p => p.scene || (((Number(p.id)>=6 && Number(p.id)<=8)||p.id==='15') ? 'DOLOMITAS' : 'SÃO PAULO');
@@ -169,10 +220,10 @@ const grid=document.querySelector('#products');
 const dialog=document.querySelector('#product-dialog');
 let lastTrigger;
 function render(type='all'){
- grid.innerHTML=products.filter(p=>type==='all'||p.type===type).map(p=>`<article class="product"><button class="product-visual" data-id="${p.id}" aria-label="Ver ${p.name}: imagens e proposta de produção"><img src="${lifestyle(p)}" alt="Campanha conceitual: modelo com ${p.name}, ${p.label.toLowerCase()} ROTA" loading="lazy" width="800" height="1000"><span class="product-tag ${p.new?'new':''}">${p.new?'NOVA PEÇA':locationName(p)}</span><span class="product-plus" aria-hidden="true">+</span></button><div class="product-info"><div><h3>${p.name}</h3><p>${p.label}</p></div><span class="product-index">/${p.id}</span></div></article>`).join('');
+ grid.innerHTML=products.filter(p=>type==='all'||p.type===type).map(p=>`<article class="product"><button class="product-visual" data-id="${p.id}" aria-label="Ver ${p.name}: imagens, conceito e proposta de produção"><img src="${lifestyle(p)}" alt="Campanha conceitual: modelo com ${p.name}, ${p.label.toLowerCase()} ROTA" loading="lazy" width="800" height="1000"><span class="product-tag ${p.new?'new':''}">${p.new?'NOVA PEÇA':locationName(p)}</span><span class="product-plus" aria-hidden="true">+</span></button><div class="product-info"><div><h3>${p.name}</h3><p>${p.label}</p></div><span class="product-index">/${p.id}</span></div></article>`).join('');
  grid.querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>openProduct(b.dataset.id,b)));
 }
-function openProduct(id,trigger){const p=products.find(p=>p.id===id);lastTrigger=trigger;document.querySelector('#detail-content').innerHTML=`<div class="detail-layout"><div class="detail-gallery"><img src="${lifestyle(p)}" alt="Modelo vestindo ${p.name}; campanha conceitual em ${locationName(p)}">${trailViews[p.id]?`<figure class="trail-product"><img class="flat" src="assets/${trailViews[p.id]}.webp" alt="${p.name} na trilha: frente à esquerda e costas à direita, peça completa"><figcaption>NA TRILHA / FRENTE + COSTAS</figcaption></figure>`:''}<img class="flat" src="assets/${p.file}.webp" alt="Mockup de frente e costas de ${p.name}"><p class="gallery-caption">CAMPANHA CONCEITUAL / ${locationName(p)}<br>MOCKUP DE FRENTE E COSTAS / ROTA WEAR</p></div><div class="detail-copy"><p class="eyebrow">ROTA WEAR / ${p.id} / ${p.label.toUpperCase()}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p><p class="detail-status">ESPECIFICAÇÃO PROPOSTA · A VALIDAR EM PROTÓTIPO</p><dl>${[['Modelagem',p.fit],['Material',p.fabric],['Estampa e marca',p.print],['Construção e acabamento',p.finish],['Paleta',p.color]].map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="caption">Gramaturas e composições são pontos de partida para cotação. Medidas, grade, consumo, aplicações e desempenho precisam de ficha técnica e amostra aprovadas.</p></div></div>`;enableImageZoom(document.querySelector('#detail-content'));dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;}
+function openProduct(id,trigger){const p=products.find(p=>p.id===id);lastTrigger=trigger;document.querySelector('#detail-content').innerHTML=`<div class="detail-layout"><div class="detail-gallery"><img src="${lifestyle(p)}" alt="Modelo vestindo ${p.name}; campanha conceitual em ${locationName(p)}">${trailViews[p.id]?`<figure class="trail-product"><img class="flat" src="assets/${trailViews[p.id]}.webp" alt="${p.name} na trilha: frente à esquerda e costas à direita, peça completa"><figcaption>NA TRILHA / FRENTE + COSTAS</figcaption></figure>`:''}<img class="flat" src="assets/${p.file}.webp" alt="Mockup de frente e costas de ${p.name}"><p class="gallery-caption">CAMPANHA CONCEITUAL / ${locationName(p)}<br>MOCKUP DE FRENTE E COSTAS / ROTA WEAR</p></div><div class="detail-copy"><p class="eyebrow">ROTA WEAR / ${p.id} / ${p.label.toUpperCase()}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p>${conceptMarkup(p.id)}<p class="detail-status">ESPECIFICAÇÃO PROPOSTA · A VALIDAR EM PROTÓTIPO</p><dl>${[['Modelagem',p.fit],['Material',p.fabric],['Estampa e marca',p.print],['Construção e acabamento',p.finish],['Paleta',p.color]].map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="caption">Gramaturas e composições são pontos de partida para cotação. Medidas, grade, consumo, aplicações e desempenho precisam de ficha técnica e amostra aprovadas.</p></div></div>`;enableImageZoom(document.querySelector('#detail-content'));dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;}
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render(b.dataset.filter);}));
 document.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
@@ -185,10 +236,28 @@ const explorations = [
  {id:'12',file:'12-filmmaker-manteiga',name:'Filmmaker / Editorial',subtitle:'Amarelo-manteiga + roxo-berinjela',colors:['#eee0a1','#57234c'],phrase:'Filmmaker / ON SET',direction:'Serifa itálica de alto contraste com “ON SET” pequeno e espaçado. O prisma entra como assinatura; a expressão vem das letras e da combinação de cores.',production:'Proposta: algodão penteado de aproximadamente 240 g/m², corpo amplo. Serigrafia roxa. Ajustar os filetes mais finos da serifa para a impressão e aprovar a cor do tingimento.',fit:'Camiseta oversized · serifa editorial'},
  {id:'13',file:'13-same-crew-marrom',name:'Same crew / Arquibancada',subtitle:'Marrom-café + bege-areia + marfim',colors:['#654a3a','#cdbb9b','#f0e4c6'],phrase:'SAME CREW / DIFFERENT SCENE.',direction:'Letras esportivas e número gráfico 24 sobre corpo marrom-café, com mangas inteiras em bege-areia e ribana chocolate. A câmera nas costas conecta a linguagem de time ao universo da produção audiovisual. O número é um elemento visual desta proposta.',production:'Proposta: algodão penteado de aproximadamente 240 g/m², modelagem ringer ampla. Corpo marrom-café, mangas em bege-areia, ribana chocolate e serigrafia em marfim. Testar encolhimento e solidez da cor entre os diferentes tecidos.',fit:'Camiseta ringer · grafismo esportivo'}
 ];
+const explorationConcepts={
+  "10": [
+    "O cinema também veste",
+    "A proposta trata a camiseta como um pequeno cartaz. Letras de inspiração setentista e o contraste de vinho com amarelo-manteiga dão calor e personalidade ao nome do ofício, deixando a frente mais discreta para equilibrar a estampa das costas."
+  ],
+  "11": [
+    "Uma ideia ainda no papel",
+    "O desenho solto valoriza o momento de rascunhar e descobrir. Câmera, escrita manual e um detalhe laranja trazem o vocabulário de um caderno de criação para o tecido. A combinação com verde-musgo propõe uma leitura mais orgânica desse universo."
+  ],
+  "12": [
+    "Tipografia com voz própria",
+    "A serifa itálica aproxima o nome do ofício da linguagem de uma revista. Amarelo-manteiga e berinjela dão contraste sem recorrer ao preto, enquanto o prisma pequeno mantém a conexão com a ROTA. A personalidade está na escala e no desenho das letras."
+  ],
+  "13": [
+    "Vestir a mesma equipe",
+    "Corpo marrom e mangas areia retomam a linguagem de uma camiseta de time, com um clima cotidiano e vivido. Letras esportivas, número 24 e câmera aproximam arquibancada e crew. O contraste entre tecidos dá identidade à peça mesmo antes de ler a frase."
+  ]
+};
 document.querySelector('#explorations').innerHTML=explorations.map(p=>`<article class="exploration-card"><button class="exploration-image" data-explore="${p.id}" aria-label="Ampliar estudo ${p.name}"><img src="assets/${p.file}.webp" width="1536" height="1024" loading="lazy" alt="Estudo ${p.name}: frente, costas e modelo vestindo; ${p.subtitle.toLowerCase()}"><span aria-hidden="true">Ampliar +</span></button><div class="exploration-meta"><p class="eyebrow">ESTUDO / ${p.id}</p><div class="swatches" aria-label="${p.subtitle}">${p.colors.map(c=>`<span style="background:${c}"></span>`).join('')}</div></div><h3>${p.name}</h3><p class="exploration-color">${p.subtitle}</p><p>${p.direction}</p></article>`).join('');
 document.querySelectorAll('[data-explore]').forEach(button=>button.addEventListener('click',()=>{
  const p=explorations.find(p=>p.id===button.dataset.explore);lastTrigger=button;
- document.querySelector('#detail-content').innerHTML=`<div class="explore-detail"><img src="assets/${p.file}.webp" alt="Frente, costas e modelo vestindo o estudo ${p.name}"><div class="explore-detail-copy"><p class="eyebrow">RODADA 02 / ESTUDO ${p.id}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p><p>${p.direction}</p><dl><dt>Paleta</dt><dd>${p.subtitle}</dd><dt>Modelagem e linguagem</dt><dd>${p.fit}</dd><dt>Produção proposta</dt><dd>${p.production}</dd></dl><p class="caption">Imagem gerada com IA. Cores, arte-final, posição da estampa e medidas precisam de aprovação em protótipo. Este estudo amplia as possibilidades da coleção.</p></div></div>`;
+ document.querySelector('#detail-content').innerHTML=`<div class="explore-detail"><img src="assets/${p.file}.webp" alt="Frente, costas e modelo vestindo o estudo ${p.name}"><div class="explore-detail-copy"><p class="eyebrow">RODADA 02 / ESTUDO ${p.id}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p>${conceptMarkup(p.id,explorationConcepts)}<p>${p.direction}</p><dl><dt>Paleta</dt><dd>${p.subtitle}</dd><dt>Modelagem e linguagem</dt><dd>${p.fit}</dd><dt>Produção proposta</dt><dd>${p.production}</dd></dl><p class="caption">Imagem gerada com IA. Cores, arte-final, posição da estampa e medidas precisam de aprovação em protótipo. Este estudo amplia as possibilidades da coleção.</p></div></div>`;
  enableImageZoom(document.querySelector('#detail-content'));dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;
 }));
 
