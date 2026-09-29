@@ -42,3 +42,9 @@ As imagens orientam a direção visual. Artes vetoriais, cores de tecido, tamanh
 ## Complemento / Frente e costas na trilha
 
 Em movimento, Location, Motion e Same crew ganham editoriais em duas vistas, com o mesmo modelo de frente à esquerda e de costas à direita. Enquadramento inclui gola ou capuz, mangas, punhos e barra, sem mochila ou braços ocultando as aplicações. A galeria de trilha e as fichas individuais apresentam essas imagens adicionais, ilustrativas e geradas por IA.
+
+## Complemento / Personagens e visualização
+
+A campanha inclui personagens visuais gerados a partir de referências fornecidas: participação na trilha, na rua e no set. Todas as imagens continuam sendo conceitos gerados por IA.
+
+Dentro das fichas, a fotografia editorial, a vista de trilha e o mockup podem ser abertos no visualizador. Controles de zoom, ajuste à tela e abertura do arquivo da imagem permitem inspecionar os detalhes. Fechar o visualizador retorna à ficha da peça.

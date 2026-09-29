@@ -162,7 +162,7 @@ const products = [
     "new": true
   }
 ];
-const trailViews = {"15": "15-em-movimento-trilha-frente-verso", "08": "08-location-trilha-frente-verso", "07": "07-motion-trilha-frente-verso", "06": "06-same-crew-trilha-frente-verso"};
+const trailViews = {"15": "15-em-movimento-doug-trilha-frente-verso", "08": "08-location-doug-trilha-frente-verso", "07": "07-motion-doug-trilha-frente-verso", "06": "06-same-crew-doug-trilha-frente-verso"};
 const lifestyle = p => `assets/${p.file}${p.id==='09'?'-life':'-lifestyle'}.webp`;
 const locationName = p => p.scene || (((Number(p.id)>=6 && Number(p.id)<=8)||p.id==='15') ? 'DOLOMITAS' : 'SÃO PAULO');
 const grid=document.querySelector('#products');
@@ -172,7 +172,7 @@ function render(type='all'){
  grid.innerHTML=products.filter(p=>type==='all'||p.type===type).map(p=>`<article class="product"><button class="product-visual" data-id="${p.id}" aria-label="Ver ${p.name}: imagens e proposta de produção"><img src="${lifestyle(p)}" alt="Campanha conceitual: modelo com ${p.name}, ${p.label.toLowerCase()} ROTA" loading="lazy" width="800" height="1000"><span class="product-tag ${p.new?'new':''}">${p.new?'NOVA PEÇA':locationName(p)}</span><span class="product-plus" aria-hidden="true">+</span></button><div class="product-info"><div><h3>${p.name}</h3><p>${p.label}</p></div><span class="product-index">/${p.id}</span></div></article>`).join('');
  grid.querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>openProduct(b.dataset.id,b)));
 }
-function openProduct(id,trigger){const p=products.find(p=>p.id===id);lastTrigger=trigger;document.querySelector('#detail-content').innerHTML=`<div class="detail-layout"><div class="detail-gallery"><img src="${lifestyle(p)}" alt="Modelo vestindo ${p.name}; campanha conceitual em ${locationName(p)}">${trailViews[p.id]?`<figure class="trail-product"><img class="flat" src="assets/${trailViews[p.id]}.webp" alt="${p.name} na trilha: frente à esquerda e costas à direita, peça completa"><figcaption>NA TRILHA / FRENTE + COSTAS</figcaption></figure>`:''}<img class="flat" src="assets/${p.file}.webp" alt="Mockup de frente e costas de ${p.name}"><p class="gallery-caption">CAMPANHA CONCEITUAL / ${locationName(p)}<br>MOCKUP DE FRENTE E COSTAS / ROTA WEAR</p></div><div class="detail-copy"><p class="eyebrow">ROTA WEAR / ${p.id} / ${p.label.toUpperCase()}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p><p class="detail-status">ESPECIFICAÇÃO PROPOSTA · A VALIDAR EM PROTÓTIPO</p><dl>${[['Modelagem',p.fit],['Material',p.fabric],['Estampa e marca',p.print],['Construção e acabamento',p.finish],['Paleta',p.color]].map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="caption">Gramaturas e composições são pontos de partida para cotação. Medidas, grade, consumo, aplicações e desempenho precisam de ficha técnica e amostra aprovadas.</p></div></div>`;dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;}
+function openProduct(id,trigger){const p=products.find(p=>p.id===id);lastTrigger=trigger;document.querySelector('#detail-content').innerHTML=`<div class="detail-layout"><div class="detail-gallery"><img src="${lifestyle(p)}" alt="Modelo vestindo ${p.name}; campanha conceitual em ${locationName(p)}">${trailViews[p.id]?`<figure class="trail-product"><img class="flat" src="assets/${trailViews[p.id]}.webp" alt="${p.name} na trilha: frente à esquerda e costas à direita, peça completa"><figcaption>NA TRILHA / FRENTE + COSTAS</figcaption></figure>`:''}<img class="flat" src="assets/${p.file}.webp" alt="Mockup de frente e costas de ${p.name}"><p class="gallery-caption">CAMPANHA CONCEITUAL / ${locationName(p)}<br>MOCKUP DE FRENTE E COSTAS / ROTA WEAR</p></div><div class="detail-copy"><p class="eyebrow">ROTA WEAR / ${p.id} / ${p.label.toUpperCase()}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p><p class="detail-status">ESPECIFICAÇÃO PROPOSTA · A VALIDAR EM PROTÓTIPO</p><dl>${[['Modelagem',p.fit],['Material',p.fabric],['Estampa e marca',p.print],['Construção e acabamento',p.finish],['Paleta',p.color]].map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="caption">Gramaturas e composições são pontos de partida para cotação. Medidas, grade, consumo, aplicações e desempenho precisam de ficha técnica e amostra aprovadas.</p></div></div>`;enableImageZoom(document.querySelector('#detail-content'));dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;}
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render(b.dataset.filter);}));
 document.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
@@ -189,7 +189,7 @@ document.querySelector('#explorations').innerHTML=explorations.map(p=>`<article 
 document.querySelectorAll('[data-explore]').forEach(button=>button.addEventListener('click',()=>{
  const p=explorations.find(p=>p.id===button.dataset.explore);lastTrigger=button;
  document.querySelector('#detail-content').innerHTML=`<div class="explore-detail"><img src="assets/${p.file}.webp" alt="Frente, costas e modelo vestindo o estudo ${p.name}"><div class="explore-detail-copy"><p class="eyebrow">RODADA 02 / ESTUDO ${p.id}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p><p>${p.direction}</p><dl><dt>Paleta</dt><dd>${p.subtitle}</dd><dt>Modelagem e linguagem</dt><dd>${p.fit}</dd><dt>Produção proposta</dt><dd>${p.production}</dd></dl><p class="caption">Imagem gerada com IA. Cores, arte-final, posição da estampa e medidas precisam de aprovação em protótipo. Este estudo amplia as possibilidades da coleção.</p></div></div>`;
- dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;
+ enableImageZoom(document.querySelector('#detail-content'));dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;
 }));
 
 // Editorial images use the same accessible dialog as the collection.
@@ -203,6 +203,83 @@ document.querySelectorAll('[data-editorial]').forEach(button=>button.addEventLis
  const large=document.createElement('img');large.src=img.src;large.alt=img.alt;
  const caption=document.createElement('figcaption');caption.textContent='Imagem ilustrativa gerada por IA. Peças, modelos e cenários conceituais.';
  figure.append(large,heading,caption);content.append(figure);
- dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;
+ enableImageZoom(document.querySelector('#detail-content'));dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;
 }));
 document.querySelector('[data-open-basic]').addEventListener('click',event=>openProduct('16',event.currentTarget));
+
+// A second dialog keeps the product information and its scroll position intact.
+const imageDialog=document.querySelector('#image-dialog');
+const zoomImage=document.querySelector('#zoom-image');
+const imageViewport=document.querySelector('#image-viewport');
+const imageStage=document.querySelector('#image-stage');
+const zoomLevel=document.querySelector('#zoom-level');
+const zoomIn=document.querySelector('#zoom-in');
+const zoomOut=document.querySelector('#zoom-out');
+let imageTrigger, imageScale=1, imageDrag;
+
+function enableImageZoom(container){
+ container.querySelectorAll('img').forEach(img=>{
+  if(img.closest('button,a'))return;
+  const button=document.createElement('button');
+  button.type='button';button.className='zoom-trigger';
+  button.setAttribute('aria-label',`Ampliar imagem: ${img.alt}`);
+  const hint=document.createElement('span');hint.className='zoom-hint';hint.textContent='Ver imagem +';hint.setAttribute('aria-hidden','true');
+  img.before(button);button.append(img,hint);
+  button.addEventListener('click',()=>openImageZoom(img,button));
+ });
+}
+
+function layoutZoom(center=true){
+ if(!zoomImage.naturalWidth||!imageDialog.open)return;
+ const oldWidth=imageStage.offsetWidth,oldHeight=imageStage.offsetHeight;
+ const centerX=(imageViewport.scrollLeft+imageViewport.clientWidth/2)/Math.max(1,oldWidth);
+ const centerY=(imageViewport.scrollTop+imageViewport.clientHeight/2)/Math.max(1,oldHeight);
+ const fit=Math.min((imageViewport.clientWidth-24)/zoomImage.naturalWidth,(imageViewport.clientHeight-24)/zoomImage.naturalHeight,1);
+ const width=Math.round(zoomImage.naturalWidth*fit*imageScale),height=Math.round(zoomImage.naturalHeight*fit*imageScale);
+ zoomImage.style.width=`${width}px`;zoomImage.style.height=`${height}px`;
+ imageStage.style.width=`${Math.max(imageViewport.clientWidth,width+24)}px`;
+ imageStage.style.height=`${Math.max(imageViewport.clientHeight,height+24)}px`;
+ zoomLevel.value=`${Math.round(imageScale*100)}%`;
+ zoomOut.disabled=imageScale<=1;zoomIn.disabled=imageScale>=4;
+ imageViewport.classList.toggle('is-zoomed',imageScale>1);
+ if(center){imageViewport.scrollLeft=centerX*imageStage.offsetWidth-imageViewport.clientWidth/2;imageViewport.scrollTop=centerY*imageStage.offsetHeight-imageViewport.clientHeight/2;}
+}
+function changeZoom(next){imageScale=Math.max(1,Math.min(4,next));layoutZoom();}
+function openImageZoom(img,trigger){
+ imageTrigger=trigger;imageScale=1;
+ document.querySelector('#image-title').textContent=img.alt||'Imagem ampliada';
+ document.querySelector('#image-original').href=img.dataset.full||img.src;
+ zoomImage.alt=img.alt;zoomImage.onload=()=>layoutZoom(false);
+ zoomImage.src=img.dataset.full||img.src;
+ imageDialog.showModal();document.body.style.overflow='hidden';
+ imageViewport.scrollLeft=0;imageViewport.scrollTop=0;layoutZoom(false);
+ document.querySelector('#image-close').focus();
+}
+zoomIn.addEventListener('click',()=>changeZoom(imageScale+.5));
+zoomOut.addEventListener('click',()=>changeZoom(imageScale-.5));
+document.querySelector('#zoom-fit').addEventListener('click',()=>changeZoom(1));
+document.querySelector('#image-close').addEventListener('click',()=>imageDialog.close());
+imageDialog.addEventListener('keydown',event=>{
+ if(['+','=','-','0'].includes(event.key)){
+  event.preventDefault();changeZoom(event.key==='0'?1:imageScale+(event.key==='-'?-.5:.5));
+ }
+});
+imageDialog.addEventListener('close',()=>{
+ imageDrag=null;imageViewport.classList.remove('is-dragging');
+ if(!dialog.open)document.body.style.overflow='';
+ imageTrigger?.focus({preventScroll:true});
+});
+imageViewport.addEventListener('pointerdown',event=>{
+ if(event.pointerType!=='mouse'||event.button!==0||imageScale<=1)return;
+ imageDrag={x:event.clientX,y:event.clientY,left:imageViewport.scrollLeft,top:imageViewport.scrollTop};
+ imageViewport.setPointerCapture(event.pointerId);imageViewport.classList.add('is-dragging');event.preventDefault();
+});
+imageViewport.addEventListener('pointermove',event=>{
+ if(!imageDrag)return;
+ imageViewport.scrollLeft=imageDrag.left+imageDrag.x-event.clientX;
+ imageViewport.scrollTop=imageDrag.top+imageDrag.y-event.clientY;
+});
+for(const name of ['pointerup','pointercancel','lostpointercapture'])imageViewport.addEventListener(name,()=>{imageDrag=null;imageViewport.classList.remove('is-dragging');});
+window.addEventListener('resize',()=>layoutZoom());
+enableImageZoom(document.querySelector('.hero-image'));
+enableImageZoom(document.querySelector('.set-layout'));
