@@ -38,3 +38,7 @@ Validar medidas, bordado, solidez de cor, ventilação e ajuste dos bonés. No g
 3. **Lá fora / Dolomitas:** três pessoas com os dois casacos revisados e acessórios.
 
 As imagens orientam a direção visual. Artes vetoriais, cores de tecido, tamanhos de aplicação e posicionamento precisam ser definidos antes da fabricação. As fichas das 12 peças principais estão no [briefing de produção](brief-producao.md).
+
+## Complemento / Frente e costas na trilha
+
+Em movimento, Location, Motion e Same crew ganham editoriais em duas vistas, com o mesmo modelo de frente à esquerda e de costas à direita. Enquadramento inclui gola ou capuz, mangas, punhos e barra, sem mochila ou braços ocultando as aplicações. A galeria de trilha e as fichas individuais apresentam essas imagens adicionais, ilustrativas e geradas por IA.
