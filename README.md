@@ -10,4 +10,4 @@ As imagens são estudos conceituais gerados com IA. As especificações de produ
 
 Publicação pelo GitHub Pages, branch `main`, pasta raiz.
 
-A linha corrida/verão reúne 11 editoriais com Douglas e Hugo. Cada ficha apresenta o conceito, as escolhas de design e o mockup, com ampliação das imagens. Os conceitos também acompanham a coleção de set e trilha, os acessórios e os estudos de cor.
+A campanha principal prioriza a equipe em produção e os editoriais de rua e trilha. Os 11 editoriais recentes com Douglas e Hugo formam o Lado B, uma série lifestyle complementar. Cada ficha apresenta primeiro o conceito, as escolhas de design e o mockup, com ampliação das imagens; o Lado B pode ser aberto separadamente. Os conceitos também acompanham a coleção de set e trilha, os acessórios e os estudos de cor.
