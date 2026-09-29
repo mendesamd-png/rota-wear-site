@@ -1,18 +1,169 @@
 const products = [
- {"id":"14","name":"Jogo coletivo","type":"camiseta","label":"Camisa de futebol","file":"14-jogo-coletivo","phrase":"NINGUÉM FAZ FILME SOZINHO.","fit":"Camisa de futebol de caimento solto, gola polo com abertura em V e punhos contrastantes.","fabric":"Proposta: malha esportiva de poliéster jacquard, aproximadamente 160–190 g/m², com listras verticais tonais e textura de microfuros a desenvolver com o fornecedor.","print":"ROTA em serifa creme no peito, escudo tipográfico e assinatura a production company. Costas com a frase, número 24 e FRAMES POR SEGUNDO, em referência ao cinema.","finish":"Gola e punhos em creme. Propor escudo aplicado e transfer compatível com poliéster; testar migração de cor, toque e aderência na amostra.","color":"Verde profundo / creme","new":true},
- {"id":"15","name":"Em movimento","type":"corta-vento","label":"Corta-vento com capuz","file":"15-em-movimento","phrase":"KEEP ROLLING","fit":"Amplo, com capuz, zíper frontal completo, mangas raglan, punhos elásticos e ajuste na barra.","fabric":"Proposta: nylon ripstop leve, aproximadamente 100–130 g/m². Reproduzir o toque visual levemente amassado e o brilho discreto do estudo original em amostra física.","print":"Assinatura ROTA pequena no peito. Costas com KEEP ROLLING, CAMERA • BODY • MIND e linha de percurso, preservando a composição original.","finish":"Recortes verdes, filetes creme e puxadores de zíper laranja. Bolsos com zíper. Aplicação compatível com nylon a testar; impermeabilidade não validada.","color":"Grafite / verde profundo / creme / detalhes laranja","new":true},
- {id:'09',name:'Filmmaker On Set',type:'camiseta',label:'Camiseta oversized',file:'09-filmmaker-duas-linhas',phrase:'FILMMAKER ON SET',fit:'Oversized boxy, ombro deslocado, manga ampla próxima ao cotovelo e gola alta de ribana.',fabric:'Proposta: 100% algodão penteado, 260 g/m², pré-encolhido. Confirmar estabilidade dimensional com a confecção.',print:'Serigrafia monocromática em branco-osso. Duas linhas nas costas: FILMMAKER em sans serif alta e condensada; ON SET em serifa itálica. Filetes finos, prisma entre as linhas e assinatura ROTA discreta no peito.',finish:'Costura dupla em barra e mangas; reforço de ombro a ombro; etiqueta tecida na lateral.',color:'Preto / branco-osso',new:true},
- {id:'01',name:'Olhar livre',type:'camiseta',label:'Camiseta oversized',file:'01-olhar-livre',phrase:'Let your eyes wander.',fit:'Oversized, ombros deslocados e manga ampla.',fabric:'Proposta: meia-malha 100% algodão penteado, 240 g/m².',print:'Serigrafia azul sobre base branco-osso; ilustração de câmera e fotógrafo. Prisma discreto na nuca.',finish:'Gola em ribana, reforço interno e barra com costura dupla.',color:'Branco-osso / azul'},
- {id:'02',name:'Pronto pro REC',type:'camiseta',label:'Camiseta oversized',file:'02-pronto-pro-rec',phrase:'Outside the frame.',fit:'Oversized boxy, corpo amplo e gola de ribana.',fabric:'Proposta: 100% algodão penteado, 260 g/m², preto com efeito lavado a validar.',print:'Serigrafia branco-osso e azul. Câmera sobre tripé nas costas; assinatura pequena no peito.',finish:'Teste de lavagem e migração de cor antes de aprovar o efeito lavado.',color:'Preto lavado / branco-osso / azul'},
- {id:'03',name:'Repertório de rua',type:'camiseta',label:'Camiseta ringer',file:'03-repertorio-de-rua',phrase:'Street-fed creativity.',fit:'Ringer de caimento amplo, gola e punhos contrastantes.',fabric:'Proposta: 100% algodão penteado, 240 g/m²; ribana azul compatível com a malha.',print:'Serigrafia azul, com videomaker no skate. Aplicação frontal de maior formato.',finish:'Validar encolhimento entre ribana e corpo; reforço de ombro a ombro.',color:'Branco-osso / azul'},
- {id:'04',name:'Encontro',type:'camiseta',label:'Camiseta oversized',file:'04-encontro',phrase:'Tem coisa que só acontece quando a gente se encontra.',fit:'Oversized, ombro deslocado e comprimento confortável.',fabric:'Proposta: 100% algodão penteado, 240 g/m², tingido em azul.',print:'Serigrafia branco-osso nas costas, com ilustração de amigos à mesa; assinatura frontal pequena.',finish:'Aprovar opacidade da tinta, fidelidade do azul e toque no tecido tingido.',color:'Azul / branco-osso'},
- {id:'05',name:'Polo de produção',type:'moletom',label:'Moletom polo',file:'05-moletom-polo',phrase:'Outside the frame.',fit:'Polo ampla, ombros caídos, gola estruturada e abertura de três botões.',fabric:'Proposta: moletom de 350 g/m², 80% algodão / 20% poliéster; gola com estrutura a validar.',print:'Bordado ROTA no peito; aplicações menores no punho e nas costas. Detalhe azul horizontal.',finish:'Carcela reforçada, punhos e barra em ribana; testar volume do bordado no avesso.',color:'Preto / grafite / azul'},
- {id:'06',name:'Same crew',type:'moletom',label:'Moletom gola careca',file:'06-moletom-same-crew',phrase:'Same crew. Different scene.',fit:'Amplo, gola careca, ombros deslocados e punhos em ribana.',fabric:'Proposta: moletom de 350 g/m², 80% algodão / 20% poliéster, interior felpado.',print:'Serigrafia azul com sequência ilustrada de set, skate e litoral. Prisma pequeno na nuca.',finish:'Testar legibilidade dos traços e resistência à lavagem no tecido escolhido.',color:'Branco-osso / azul'},
- {id:'07',name:'Motion',type:'corta-vento',label:'Corta-vento com zíper',file:'07-corta-vento-motion',phrase:'Always in motion.',fit:'Regular amplo para sobreposição, gola alta e zíper frontal completo; sem capuz.',fabric:'Proposta: nylon ripstop, 100–130 g/m², acabamento repelente à água. Resistência ao vento a validar.',print:'Transfer compatível com nylon ou serigrafia específica, mediante teste. Faixas azuis nas mangas e ROTA nas costas.',finish:'Punhos elásticos, ajuste na barra e proteção interna do zíper. Sem alegação de impermeabilidade.',color:'Preto / azul / branco-osso'},
- {id:'08',name:'Location',type:'corta-vento',label:'Anoraque com capuz',file:'08-corta-vento-location-amarelo',phrase:'Let your eyes wander.',fit:'Anoraque amplo, capuz ajustável, meio zíper e bolso frontal com aba.',fabric:'Proposta: nylon ripstop, 100–130 g/m², com acabamento repelente à água; corpo preto, capuz e ombros amarelo dourado, aba do bolso azul.',print:'Aplicação compatível com o acabamento do nylon. Ilustração olho/diafragma nas costas e assinatura no peito.',finish:'Testar costuras nos recortes e aderência da estampa. Uma versão impermeável exige outra especificação e ensaios.',color:'Preto / amarelo dourado / azul; estampa em marfim'}
+  {
+    "id": "16",
+    "name": "Rota em cena",
+    "type": "camiseta",
+    "label": "Camiseta básica de set",
+    "file": "16-rota-em-cena",
+    "phrase": "TODA ROTA RENDE FILME.",
+    "fit": "Regular confortável, levemente solta, manga de comprimento convencional e gola de ribana. Mobilidade sem excesso de tecido.",
+    "fabric": "Proposta: meia-malha 100% algodão penteado, 200–220 g/m², preto fosco. Validar conforto térmico, encolhimento e durabilidade em uso.",
+    "print": "ROTA / EM CENA pequeno no peito; TODA ROTA RENDE FILME. discreto na nuca. Serigrafia fosca em branco-osso, sem grande estampa nas costas.",
+    "finish": "Reforço de ombro a ombro, costura dupla e etiqueta confortável. Evitar aviamentos soltos e aplicações de alto relevo em áreas de contato. Testar a peça em uma diária real.",
+    "color": "Preto fosco / branco-osso",
+    "scene": "BASTIDOR DE SET",
+    "new": true
+  },
+  {
+    "id": "14",
+    "name": "Jogo coletivo",
+    "type": "camiseta",
+    "label": "Camisa de futebol vintage",
+    "file": "14-jogo-coletivo-vintage",
+    "phrase": "NINGUÉM FAZ FILME SOZINHO.",
+    "fit": "Caimento amplo inspirado no futebol dos anos 1990, gola polo contrastante, abertura em V e mangas soltas.",
+    "fabric": "Proposta: poliéster jacquard de aproximadamente 160–190 g/m², preto com trama geométrica tonal de prismas. Desenvolver amostra da trama e avaliar toque e brilho.",
+    "print": "ROTA em branco-osso no peito, prisma e CREW como assinaturas. Costas com NINGUÉM FAZ FILME SOZINHO., número 24 contornado em branco-osso e azul, e FRAMES POR SEGUNDO.",
+    "finish": "Gola e punhos azuis com filete branco-osso. Aplicações compatíveis com poliéster; testar migração de cor, aderência e estabilidade da gola.",
+    "color": "Preto / grafite tonal / azul ROTA / branco-osso",
+    "new": true
+  },
+  {
+    "id": "15",
+    "name": "Em movimento",
+    "type": "corta-vento",
+    "label": "Corta-vento com capuz",
+    "file": "15-em-movimento-azul",
+    "phrase": "KEEP ROLLING",
+    "fit": "Amplo, com capuz, zíper frontal completo, mangas raglan, punhos elásticos e ajuste na barra.",
+    "fabric": "Proposta: nylon ripstop leve, aproximadamente 100–130 g/m². Reproduzir o toque visual levemente amassado e o brilho discreto do estudo original em amostra física.",
+    "print": "Assinatura ROTA pequena no peito. Costas com KEEP ROLLING, CAMERA • BODY • MIND e linha de percurso, preservando a composição original.",
+    "finish": "Recortes em azul ROTA #2160D0, filetes creme e puxadores laranja. Bolsos com zíper. Aplicação compatível com nylon a testar; impermeabilidade não validada.",
+    "color": "Grafite / azul ROTA / creme / detalhes laranja",
+    "new": true
+  },
+  {
+    "id": "09",
+    "name": "Filmmaker On Set",
+    "type": "camiseta",
+    "label": "Camiseta oversized",
+    "file": "09-filmmaker-duas-linhas",
+    "phrase": "FILMMAKER ON SET",
+    "fit": "Oversized boxy, ombro deslocado, manga ampla próxima ao cotovelo e gola alta de ribana.",
+    "fabric": "Proposta: 100% algodão penteado, 260 g/m², pré-encolhido. Confirmar estabilidade dimensional com a confecção.",
+    "print": "Serigrafia monocromática em branco-osso. Duas linhas nas costas: FILMMAKER em sans serif alta e condensada; ON SET em serifa itálica. Filetes finos, prisma entre as linhas e assinatura ROTA discreta no peito.",
+    "finish": "Costura dupla em barra e mangas; reforço de ombro a ombro; etiqueta tecida na lateral.",
+    "color": "Preto / branco-osso",
+    "new": true
+  },
+  {
+    "id": "01",
+    "name": "Olhar livre",
+    "type": "camiseta",
+    "label": "Camiseta oversized",
+    "file": "01-olhar-livre",
+    "phrase": "Let your eyes wander.",
+    "fit": "Oversized, ombros deslocados e manga ampla.",
+    "fabric": "Proposta: meia-malha 100% algodão penteado, 240 g/m².",
+    "print": "Serigrafia azul sobre base branco-osso; ilustração de câmera e fotógrafo. Prisma discreto na nuca.",
+    "finish": "Gola em ribana, reforço interno e barra com costura dupla.",
+    "color": "Branco-osso / azul"
+  },
+  {
+    "id": "02",
+    "name": "Pronto pro REC",
+    "type": "camiseta",
+    "label": "Camiseta oversized",
+    "file": "02-pronto-pro-rec",
+    "phrase": "Outside the frame.",
+    "fit": "Oversized boxy, corpo amplo e gola de ribana.",
+    "fabric": "Proposta: 100% algodão penteado, 260 g/m², preto com efeito lavado a validar.",
+    "print": "Serigrafia branco-osso e azul. Câmera sobre tripé nas costas; assinatura pequena no peito.",
+    "finish": "Teste de lavagem e migração de cor antes de aprovar o efeito lavado.",
+    "color": "Preto lavado / branco-osso / azul"
+  },
+  {
+    "id": "03",
+    "name": "Repertório de rua",
+    "type": "camiseta",
+    "label": "Camiseta ringer",
+    "file": "03-repertorio-de-rua",
+    "phrase": "Street-fed creativity.",
+    "fit": "Ringer de caimento amplo, gola e punhos contrastantes.",
+    "fabric": "Proposta: 100% algodão penteado, 240 g/m²; ribana azul compatível com a malha.",
+    "print": "Serigrafia azul, com videomaker no skate. Aplicação frontal de maior formato.",
+    "finish": "Validar encolhimento entre ribana e corpo; reforço de ombro a ombro.",
+    "color": "Branco-osso / azul"
+  },
+  {
+    "id": "04",
+    "name": "Encontro",
+    "type": "camiseta",
+    "label": "Camiseta oversized",
+    "file": "04-encontro",
+    "phrase": "Tem coisa que só acontece quando a gente se encontra.",
+    "fit": "Oversized, ombro deslocado e comprimento confortável.",
+    "fabric": "Proposta: 100% algodão penteado, 240 g/m², tingido em azul.",
+    "print": "Serigrafia branco-osso nas costas, com ilustração de amigos à mesa; assinatura frontal pequena.",
+    "finish": "Aprovar opacidade da tinta, fidelidade do azul e toque no tecido tingido.",
+    "color": "Azul / branco-osso"
+  },
+  {
+    "id": "05",
+    "name": "Polo de produção",
+    "type": "moletom",
+    "label": "Moletom polo",
+    "file": "05-moletom-polo",
+    "phrase": "Outside the frame.",
+    "fit": "Polo ampla, ombros caídos, gola estruturada e abertura de três botões.",
+    "fabric": "Proposta: moletom de 350 g/m², 80% algodão / 20% poliéster; gola com estrutura a validar.",
+    "print": "Bordado ROTA no peito; aplicações menores no punho e nas costas. Detalhe azul horizontal.",
+    "finish": "Carcela reforçada, punhos e barra em ribana; testar volume do bordado no avesso.",
+    "color": "Preto / grafite / azul"
+  },
+  {
+    "id": "06",
+    "name": "Same crew",
+    "type": "moletom",
+    "label": "Moletom gola careca",
+    "file": "06-moletom-same-crew",
+    "phrase": "Same crew. Different scene.",
+    "fit": "Amplo, gola careca, ombros deslocados e punhos em ribana.",
+    "fabric": "Proposta: moletom de 350 g/m², 80% algodão / 20% poliéster, interior felpado.",
+    "print": "Serigrafia azul com sequência ilustrada de set, skate e litoral. Prisma pequeno na nuca.",
+    "finish": "Testar legibilidade dos traços e resistência à lavagem no tecido escolhido.",
+    "color": "Branco-osso / azul"
+  },
+  {
+    "id": "07",
+    "name": "Motion",
+    "type": "corta-vento",
+    "label": "Corta-vento com zíper",
+    "file": "07-corta-vento-motion",
+    "phrase": "Always in motion.",
+    "fit": "Regular amplo para sobreposição, gola alta e zíper frontal completo; sem capuz.",
+    "fabric": "Proposta: nylon ripstop, 100–130 g/m², acabamento repelente à água. Resistência ao vento a validar.",
+    "print": "Transfer compatível com nylon ou serigrafia específica, mediante teste. Faixas azuis nas mangas e ROTA nas costas.",
+    "finish": "Punhos elásticos, ajuste na barra e proteção interna do zíper. Sem alegação de impermeabilidade.",
+    "color": "Preto / azul / branco-osso"
+  },
+  {
+    "id": "08",
+    "name": "Location",
+    "type": "corta-vento",
+    "label": "Anoraque com capuz",
+    "file": "08-location-rota",
+    "phrase": "Let your eyes wander.",
+    "fit": "Anoraque amplo, capuz ajustável, meio zíper e bolso frontal com aba.",
+    "fabric": "Proposta: nylon ripstop, 100–130 g/m², com acabamento repelente à água a validar. Corpo preto, capuz e ombros azul ROTA, aba do bolso grafite.",
+    "print": "Aplicação compatível com o acabamento do nylon. Ilustração olho/diafragma nas costas e assinatura no peito.",
+    "finish": "Testar costuras nos recortes e aderência da estampa. Uma versão impermeável exige outra especificação e ensaios.",
+    "color": "Preto / azul ROTA / grafite; estampa em branco-osso",
+    "new": true
+  }
 ];
 const lifestyle = p => `assets/${p.file}${p.id==='09'?'-life':'-lifestyle'}.webp`;
-const locationName = p => ((Number(p.id)>=6 && Number(p.id)<=8)||p.id==='15') ? 'DOLOMITAS' : 'SÃO PAULO';
+const locationName = p => p.scene || (((Number(p.id)>=6 && Number(p.id)<=8)||p.id==='15') ? 'DOLOMITAS' : 'SÃO PAULO');
 const grid=document.querySelector('#products');
 const dialog=document.querySelector('#product-dialog');
 let lastTrigger;
@@ -39,3 +190,18 @@ document.querySelectorAll('[data-explore]').forEach(button=>button.addEventListe
  document.querySelector('#detail-content').innerHTML=`<div class="explore-detail"><img src="assets/${p.file}.webp" alt="Frente, costas e modelo vestindo o estudo ${p.name}"><div class="explore-detail-copy"><p class="eyebrow">RODADA 02 / ESTUDO ${p.id}</p><h2 id="detail-title">${p.name}</h2><p class="detail-phrase">${p.phrase}</p><p>${p.direction}</p><dl><dt>Paleta</dt><dd>${p.subtitle}</dd><dt>Modelagem e linguagem</dt><dd>${p.fit}</dd><dt>Produção proposta</dt><dd>${p.production}</dd></dl><p class="caption">Imagem gerada com IA. Cores, arte-final, posição da estampa e medidas precisam de aprovação em protótipo. Este estudo amplia as possibilidades da coleção.</p></div></div>`;
  dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;
 }));
+
+// Editorial images use the same accessible dialog as the collection.
+document.querySelectorAll('[data-editorial]').forEach(button=>button.addEventListener('click',()=>{
+ lastTrigger=button;
+ const img=button.querySelector('img');
+ const content=document.querySelector('#detail-content');
+ content.replaceChildren();
+ const figure=document.createElement('figure');figure.className='editorial-detail';
+ const heading=document.createElement('h2');heading.id='detail-title';heading.textContent=button.dataset.title;
+ const large=document.createElement('img');large.src=img.src;large.alt=img.alt;
+ const caption=document.createElement('figcaption');caption.textContent='Imagem ilustrativa gerada por IA. Peças, modelos e cenários conceituais.';
+ figure.append(large,heading,caption);content.append(figure);
+ dialog.showModal();document.body.style.overflow='hidden';dialog.scrollTop=0;
+}));
+document.querySelector('[data-open-basic]').addEventListener('click',event=>openProduct('16',event.currentTarget));

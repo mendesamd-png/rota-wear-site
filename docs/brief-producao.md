@@ -1,16 +1,26 @@
-# ROTA Wear — briefing preliminar de produção
+# ROTA Wear / briefing preliminar de produção
 
-Documento para discussão com direção de arte e confecção. Todas as especificações abaixo são propostas a validar em amostra. As imagens são estudos gerados com IA. Não há lote, preço, orçamento, prazo ou fornecedor aprovado.
+Todas as especificações são propostas a validar em protótipo. Imagens ilustrativas geradas por IA. Sem fornecedor, lote, preço ou prazo aprovado.
+
+## 16 / Rota em cena
+
+- Frase: TODA ROTA RENDE FILME.
+- Categoria: Camiseta básica de set
+- Modelagem: Regular confortável, levemente solta, manga de comprimento convencional e gola de ribana. Mobilidade sem excesso de tecido.
+- Material: Proposta: meia-malha 100% algodão penteado, 200–220 g/m², preto fosco. Validar conforto térmico, encolhimento e durabilidade em uso.
+- Estampa e marca: ROTA / EM CENA pequeno no peito; TODA ROTA RENDE FILME. discreto na nuca. Serigrafia fosca em branco-osso, sem grande estampa nas costas.
+- Acabamento: Reforço de ombro a ombro, costura dupla e etiqueta confortável. Evitar aviamentos soltos e aplicações de alto relevo em áreas de contato. Testar a peça em uma diária real.
+- Cores: Preto fosco / branco-osso
 
 ## 14 / Jogo coletivo
 
 - Frase: NINGUÉM FAZ FILME SOZINHO.
-- Categoria: Camisa de futebol
-- Modelagem: Camisa de futebol de caimento solto, gola polo com abertura em V e punhos contrastantes.
-- Material: Proposta: malha esportiva de poliéster jacquard, aproximadamente 160–190 g/m², com listras verticais tonais e textura de microfuros a desenvolver com o fornecedor.
-- Estampa e marca: ROTA em serifa creme no peito, escudo tipográfico e assinatura a production company. Costas com a frase, número 24 e FRAMES POR SEGUNDO, em referência ao cinema.
-- Acabamento: Gola e punhos em creme. Propor escudo aplicado e transfer compatível com poliéster; testar migração de cor, toque e aderência na amostra.
-- Cores: Verde profundo / creme
+- Categoria: Camisa de futebol vintage
+- Modelagem: Caimento amplo inspirado no futebol dos anos 1990, gola polo contrastante, abertura em V e mangas soltas.
+- Material: Proposta: poliéster jacquard de aproximadamente 160–190 g/m², preto com trama geométrica tonal de prismas. Desenvolver amostra da trama e avaliar toque e brilho.
+- Estampa e marca: ROTA em branco-osso no peito, prisma e CREW como assinaturas. Costas com NINGUÉM FAZ FILME SOZINHO., número 24 contornado em branco-osso e azul, e FRAMES POR SEGUNDO.
+- Acabamento: Gola e punhos azuis com filete branco-osso. Aplicações compatíveis com poliéster; testar migração de cor, aderência e estabilidade da gola.
+- Cores: Preto / grafite tonal / azul ROTA / branco-osso
 
 ## 15 / Em movimento
 
@@ -19,8 +29,8 @@ Documento para discussão com direção de arte e confecção. Todas as especifi
 - Modelagem: Amplo, com capuz, zíper frontal completo, mangas raglan, punhos elásticos e ajuste na barra.
 - Material: Proposta: nylon ripstop leve, aproximadamente 100–130 g/m². Reproduzir o toque visual levemente amassado e o brilho discreto do estudo original em amostra física.
 - Estampa e marca: Assinatura ROTA pequena no peito. Costas com KEEP ROLLING, CAMERA • BODY • MIND e linha de percurso, preservando a composição original.
-- Acabamento: Recortes verdes, filetes creme e puxadores de zíper laranja. Bolsos com zíper. Aplicação compatível com nylon a testar; impermeabilidade não validada.
-- Cores: Grafite / verde profundo / creme / detalhes laranja
+- Acabamento: Recortes em azul ROTA #2160D0, filetes creme e puxadores laranja. Bolsos com zíper. Aplicação compatível com nylon a testar; impermeabilidade não validada.
+- Cores: Grafite / azul ROTA / creme / detalhes laranja
 
 ## 09 / Filmmaker On Set
 
@@ -107,14 +117,14 @@ Documento para discussão com direção de arte e confecção. Todas as especifi
 - Frase: Let your eyes wander.
 - Categoria: Anoraque com capuz
 - Modelagem: Anoraque amplo, capuz ajustável, meio zíper e bolso frontal com aba.
-- Material: Proposta: nylon ripstop, 100–130 g/m², com acabamento repelente à água; corpo preto, capuz e ombros amarelo dourado, aba do bolso azul.
+- Material: Proposta: nylon ripstop, 100–130 g/m², com acabamento repelente à água a validar. Corpo preto, capuz e ombros azul ROTA, aba do bolso grafite.
 - Estampa e marca: Aplicação compatível com o acabamento do nylon. Ilustração olho/diafragma nas costas e assinatura no peito.
 - Acabamento: Testar costuras nos recortes e aderência da estampa. Uma versão impermeável exige outra especificação e ensaios.
-- Cores: Preto / amarelo dourado / azul; estampa em marfim
+- Cores: Preto / azul ROTA / grafite; estampa em branco-osso
 
 ## Antes de fabricar
 
-1. Selecionar peças, cores e grade. Proposta inicial: Filmmaker On Set, uma camiseta ilustrada e um casaco.
+1. Selecionar peças, cores e grade. Proposta inicial para avaliar: Rota em cena, Jogo coletivo e um casaco.
 2. Finalizar a arte vetorial com os arquivos oficiais ROTA. Ajustar tamanhos mínimos de letras, espessura de traços e separação de cores com o fornecedor.
 3. Desenvolver tabela de medidas por tamanho e tolerâncias com modelista; não usar dimensões inferidas dos mockups.
 4. Aprovar tecido real, modelagem e localização das aplicações em amostra física.
@@ -134,3 +144,6 @@ Os casacos são propostas de proteção contra vento, com acabamento repelente �
 - Parceria: definir aporte ou serviço e contrapartida antes de apresentar a terceiros.
 
 A forma de financiamento ainda está em estudo. Nenhum valor de custo, receita ou retorno foi estimado nesta apresentação.
+
+
+Acessórios, ensaio coletivo e frases: consultar [Rodada 03](rodada-03.md).
